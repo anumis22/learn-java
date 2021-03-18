@@ -16,11 +16,21 @@ public class SortBigDecimal {
         }
         sc.close();
 
-        BigDecimal[] x = new BigDecimal[s.length];
-        for(int i=0;i<n;i++){
-            x[i]=BigDecimal(s[i]);
+        for(int i = 0;i<n;i++){
+            BigDecimal max = new BigDecimal(s[i]);
+            int idx = i;
+            for(int j = i+1;j<n;j++)
+            {
+                BigDecimal curr = new BigDecimal(s[j]);
+                if(curr.compareTo(max) == 1){
+                    max=curr;
+                    idx=j;
+                }
+            }
+            String temp = s[i];
+            s[i] = s[idx];
+            s[idx] = temp;
         }
-        Arrays.sort((BigDecimal)s[0]);
 
         //Output
         for(int i=0;i<n;i++)
