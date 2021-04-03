@@ -10,7 +10,8 @@ class RegexTest {
 
         RegexTest1 tester = new RegexTest1();
 //        tester.checker("^[^0-9][^aeiou][^bcDF][^\\s][^AEIOU][^,\\.]$");
-        tester.checker("^([a-z]\\w\\s\\W\\d\\D[A-Z][a-zA-Z][aeiouAEIOU]\\S)\\1$");
+//        tester.checker("^([a-z]\\w\\s\\W\\d\\D[A-Z][a-zA-Z][aeiouAEIOU]\\S)\\1$");
+        tester.checker("(?<=13579)\\d");
 
     }
 }
@@ -22,7 +23,7 @@ class RegexTest1 {
         Scanner Input = new Scanner(System.in);
 //        String Test_String = Input.nextLine();
         Pattern p = Pattern.compile(Regex_Pattern);
-        Matcher m = p.matcher("Mr.V.K. Doshi");
+        Matcher m = p.matcher("123Go!");
         System.out.println(m.find());
     }
 }
