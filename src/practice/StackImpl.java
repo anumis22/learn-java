@@ -10,7 +10,7 @@ public class StackImpl {
         System.out.println(isBalanced(input));
     }
 
-    static boolean isBalanced(String s) {
+    static String isBalanced(String s) {
         ArrayDeque<Character> stack = new ArrayDeque<>();
         for(int i=0;i<s.length();i++) {
             char c = s.charAt(i);
@@ -18,15 +18,15 @@ public class StackImpl {
                 stack.push(c);
             } else if(c == '}'){
                 if(stack.isEmpty() || stack.pop()!='{')
-                    return false;
+                    return "NO";
             } else if(c == ')'){
                 if(stack.isEmpty() || stack.pop()!='(')
-                    return false;
+                    return "NO";
             } else if(c == ']'){
                 if(stack.isEmpty() || stack.pop()!='[')
-                    return false;
+                    return "NO";
             }
         }
-        return stack.isEmpty();
+        return stack.isEmpty() ? "YES" : "NO";
     }
 }
