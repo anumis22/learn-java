@@ -9,12 +9,12 @@ interface Food {
 
 class Pizza implements Food {
     public String getType() {
-        return "Someone ordered a Dessert!";
+        return "Someone ordered Fast Food!";
     }
 }
 class Cake implements Food {
     public String getType() {
-        return "Someone ordered Fast Food!";
+        return "Someone ordered a Dessert!";
     }
 }
 
