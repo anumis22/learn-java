@@ -12,4 +12,8 @@ public class Parent {
     public void add() {
         System.out.println("add in parent");
     }
+
+    static void m1() {
+        System.out.println("in parent static");
+    }
 }

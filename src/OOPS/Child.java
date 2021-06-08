@@ -13,15 +13,23 @@ public class Child extends Parent {
         System.out.println("add in child");
     }
 
+    static void m1() {
+        System.out.println("in child static");
+    }
+
     public static void main(String[] args) {
         Parent p = new Child();
+        Parent p1 = new Child();
         Child c = new Child();
-        /*p.foo();
+        p.foo();
+        p1.foo();
         c.foo();
         p.bar();
-        c.bar();*/
+        c.bar();
+        /*p.m1();
+        c.m1();
         p.add();
-        c.add();
+        c.add();*/
     }
 }
 
