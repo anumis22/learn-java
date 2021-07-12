@@ -1,16 +1,24 @@
 package practice;
 
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
 
+class QuickSort {
+    int partition(int[] a, int p, int q) {
+        int pivot =q;
+        int i= p-1;
+//        for(int j=p; j<pivot)
+        return 0;
+    }
+}
 public class TestString {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        String A=sc.next();
-        String B=sc.next();
-        /* Enter your code here. Print output to STDOUT. */
-        System.out.println(A.length()+B.length());
-        getOrder(A, B);
-        capitaliseFirstLetter(A, B);
+
+        int[] arr = {5, 6, 7, 8, 9, 10, 1, 2, 3};
+       /* for()
+        System.out.println(sb.toString());*/
     }
 
     static void capitaliseFirstLetter(String A, String B) {

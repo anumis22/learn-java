@@ -17,13 +17,18 @@ class TestResult {
 
         public static int countingValleys(int steps, String path) {
             int res = 0;
+            int v= 0;
             for(int i=0;i<steps;i++) {
                 if(path.charAt(i) == 'U')
-                    res++;
+                    ++res;
                 else
-                    res--;
+                    --res;
+
+                if(res == 0 && path.charAt(i) == 'U')
+                    ++v;
             }
-            return res;
+            System.out.print(v);
+            return v;
         }
 
     }

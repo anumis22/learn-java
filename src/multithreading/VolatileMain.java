@@ -9,7 +9,7 @@ public class VolatileMain {
         for(int i = 0; i < noOfThreads; ++i)
             threads[i] = new VolatileThread(volatileData);
         for(int i = 0; i < noOfThreads; ++i)
-            threads[i].start();                 //starts all reader threads
+            threads[i].run();                 //starts all reader threads
         for(int i = 0; i < noOfThreads; ++i)
             threads[i].join();                  //wait for all threads
     }
