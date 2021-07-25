@@ -33,6 +33,32 @@ public class BinaryTree {
         return node;
     }
 
+    static int max_level = 0;
+
+    // recursive function to print left view
+    void leftViewUtil(Node node, int level)
+    {
+        // Base Case
+        if (node == null)
+            return;
+
+        // If this is the first node of its level
+        if (max_level < level) {
+            System.out.print(" " + node.data);
+            max_level = level;
+        }
+
+        // Recur for left and right subtrees
+        leftViewUtil(node.left, level + 1);
+        leftViewUtil(node.right, level + 1);
+    }
+
+    // A wrapper over leftViewUtil()
+    void leftView()
+    {
+        leftViewUtil(root, 1);
+    }
+
     public static void main(String args[])
     {
         // Let us construct the BST shown in the above figure
@@ -44,8 +70,9 @@ public class BinaryTree {
         tree.root.left.right = new Node(12);
         tree.root.left.right.left = new Node(10);
         tree.root.left.right.right = new Node(14);
+        tree.root.left.right.right.left = new Node(13);
 
-        int n1 = 10, n2 = 14;
+        /*int n1 = 10, n2 = 14;
         Node t = tree.lca(tree.root, n1, n2);
         System.out.println("LCA of " + n1 + " and " + n2 + " is " + t.data);
 
@@ -58,6 +85,7 @@ public class BinaryTree {
         n2 = 22;
         t = tree.lca(tree.root, n1, n2);
         System.out.println("LCA of " + n1 + " and " + n2 + " is " + t.data);
-
+*/
+        tree.leftView();
     }
 }

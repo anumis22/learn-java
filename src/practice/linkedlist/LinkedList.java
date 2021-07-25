@@ -133,6 +133,24 @@ public class LinkedList {
         ll1.print(ll1);
     }
 
+    void reverseIterative() {
+        Node current = first;
+        Node prev = null , next = null;
+        while(current!=null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        first = prev;
+        Node temp = first;
+        System.out.println();
+        while(temp!=null) {
+            System.out.print(temp.value +" -> ");
+            temp = temp.next;
+        }
+    }
+
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
         ll.addFirst(4);
@@ -141,6 +159,6 @@ public class LinkedList {
         ll.addLast(5);
         ll.addLast(6);
         ll.print(ll);
-        ll.reverse();
+        ll.reverseIterative();
     }
 }

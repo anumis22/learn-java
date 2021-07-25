@@ -7,7 +7,7 @@ public class MoveZeroLeftOneRight {
     public static void main(String[] args) {
         int[] arr= {0, 1, 0, 1, 0, 0, 1, 1, 0};
         int n=arr.length;
-        moveElements(arr, n);
+//        moveElements(arr, n);
         anotherMethod(arr, n);
     }
 
